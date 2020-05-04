@@ -65,6 +65,7 @@ def list_songs
   
   def play_song
     puts "Which song number would you like to play?"
+    #list_songs
     input = gets.strip
     if (1..Song.all.length).include?(input)
       song = Song.all.sort_by(&:name)[input -1]
