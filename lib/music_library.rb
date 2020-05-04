@@ -68,7 +68,7 @@ def list_songs
     list_songs
     input = gets.strip
     if (1..Song.all.length).include?(input)
-      Song.all.sort_by(&:name)[input -1]
+      song = Song.all.sort_by(&:name)[input -1]
       puts "Playing #{song.name} by #{song.artist.name}"
     end
   end 
